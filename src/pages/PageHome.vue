@@ -18,7 +18,7 @@
             </q-item-section>
 
             <q-item-section>
-              <q-item-label class="text-bold">danny__connell</q-item-label></q-item-label>
+              <q-item-label class="text-bold">danny__connell</q-item-label>
               <q-item-label caption>
                 {{ post.location }}
               </q-item-label>
@@ -47,7 +47,7 @@
           </q-item-section>
 
           <q-item-section>
-            <q-item-label class="text-bold">danny__connell</q-item-label></q-item-label>
+            <q-item-label class="text-bold">danny__connell</q-item-label>
             <q-item-label caption>
               Danny Connell
             </q-item-label>
@@ -98,10 +98,18 @@ export default {
       ]
     }
   },
+  methods: {
+    getPosts() {
+      console.log('getPosts')
+    }
+  },
   filters: {
     niceDate(value) {
       return date.formatDate(value, 'MMMM D h:mmA')
     }
+  },
+  created () {
+    this.getPosts()
   }
 }
 </script>
